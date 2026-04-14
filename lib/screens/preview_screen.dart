@@ -18,6 +18,9 @@ class PreviewScreen extends StatelessWidget {
         build: (format) => PdfService.generateCV(cvData),
         allowPrinting: true,
         allowSharing: true, // This allows saving and sharing the PDF
+        canChangePageFormat: false,
+        canChangeOrientation: false,
+        canDebug: false,
       ),
     );
   }

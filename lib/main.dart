@@ -17,11 +17,11 @@ class CVBuilderApp extends StatelessWidget {
       theme: ThemeData(
         useMaterial3: true,
         brightness: Brightness.light,
-        scaffoldBackgroundColor: const Color(0xFFF8F9FA), // Soft off-white
+        scaffoldBackgroundColor: const Color(0xFFF4F7FC), // Modern sleek background
         colorScheme: ColorScheme.fromSeed(
-          seedColor: const Color(0xFF2563EB), // Elegant Royal Blue
+          seedColor: const Color(0xFF2563EB), // Primary Royal Blue
           primary: const Color(0xFF2563EB),
-          secondary: const Color(0xFF10B981), // Emerald Green
+          secondary: const Color(0xFF10B981), // Emerald
           surface: Colors.white,
         ),
         textTheme: GoogleFonts.interTextTheme(
@@ -38,41 +38,49 @@ class CVBuilderApp extends StatelessWidget {
           iconTheme: IconThemeData(color: Color(0xFF1F2937)),
           titleTextStyle: TextStyle(
             color: Color(0xFF111827),
-            fontSize: 20,
-            fontWeight: FontWeight.w700,
+            fontSize: 22,
+            fontWeight: FontWeight.w800,
             letterSpacing: -0.5,
           ),
         ),
         inputDecorationTheme: InputDecorationTheme(
           filled: true,
-          fillColor: const Color(0xFFF3F4F6), // Soft gray for text fields
-          contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+          fillColor: Colors.white,
+          contentPadding: const EdgeInsets.symmetric(horizontal: 20, vertical: 18),
           border: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(12),
-            borderSide: BorderSide.none,
+            borderRadius: BorderRadius.circular(16),
+            borderSide: const BorderSide(color: Color(0xFFE5E7EB), width: 1.5),
           ),
           enabledBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(12),
-            borderSide: BorderSide.none,
+            borderRadius: BorderRadius.circular(16),
+            borderSide: const BorderSide(color: Color(0xFFE5E7EB), width: 1.5),
           ),
           focusedBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(12),
-            borderSide: const BorderSide(color: Color(0xFF2563EB), width: 1.5),
+            borderRadius: BorderRadius.circular(16),
+            borderSide: const BorderSide(color: Color(0xFF2563EB), width: 2),
           ),
-          labelStyle: const TextStyle(color: Color(0xFF6B7280)),
+          errorBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(16),
+            borderSide: const BorderSide(color: Colors.redAccent, width: 1.5),
+          ),
+          hintStyle: const TextStyle(color: Color(0xFF9CA3AF)),
+          labelStyle: const TextStyle(color: Color(0xFF6B7280), fontWeight: FontWeight.w500),
+          floatingLabelStyle: const TextStyle(color: Color(0xFF2563EB), fontWeight: FontWeight.w700),
         ),
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
             backgroundColor: const Color(0xFF2563EB),
             foregroundColor: Colors.white,
-            elevation: 0,
+            elevation: 4,
+            shadowColor: const Color(0xFF2563EB).withOpacity(0.4),
             padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
             shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(12),
+              borderRadius: BorderRadius.circular(16),
             ),
             textStyle: const TextStyle(
               fontSize: 16,
-              fontWeight: FontWeight.w600,
+              fontWeight: FontWeight.w700,
+              letterSpacing: 0.5,
             ),
           ),
         ),
