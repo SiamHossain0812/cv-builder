@@ -1,6 +1,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Internet access (required for Supabase + APIs) -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <!-- Location (for weather auto-detect) -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+
     <application
-        android:label="cv_builder"
+        android:label="CV Studio Pro"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
